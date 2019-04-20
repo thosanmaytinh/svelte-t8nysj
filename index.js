@@ -23,47 +23,48 @@ let api = [
     name: 'tinhte.vn/index.php',
     urlUpload: 'https://api.openload.co/1/file/ul?login=7cf46c19eaac9aee&key=iEwhiOuX',
     maxFileSize: 10
-  },{
+  }, {
     name: 'tinhte.vn',
     urlUpload: 'https://api.openload.co/1/file/ul?login=7cf46c19eaac9aee&key=iEwhiOuX',
     maxFileSize: 10
-  },{
+  }, {
     name: 'tinhte.vn',
     urlUpload: 'https://api.openload.co/1/file/ul?login=7cf46c19eaac9aee&key=iEwhiOuX',
     maxFileSize: 10
-  },{
+  }, {
     name: 'tinhte.vn',
     urlUpload: 'https://api.openload.co/1/file/ul?login=7cf46c19eaac9aee&key=iEwhiOuX',
     maxFileSize: 10
-  },{
+  }, {
     name: 'tinhte.vn',
     urlUpload: 'https://api.openload.co/1/file/ul?login=7cf46c19eaac9aee&key=iEwhiOuX',
     maxFileSize: 10
-  },{
+  }, {
     name: 'tinhte.vn',
     urlUpload: 'https://api.openload.co/1/file/ul?login=7cf46c19eaac9aee&key=iEwhiOuX',
     maxFileSize: 10
-  },{
+  }, {
     name: 'tinhte.vn',
     urlUpload: 'https://api.openload.co/1/file/ul?login=7cf46c19eaac9aee&key=iEwhiOuX',
     maxFileSize: 10
-  },{
+  }, {
     name: 'tinhte.vn',
     urlUpload: 'https://api.openload.co/1/file/ul?login=7cf46c19eaac9aee&key=iEwhiOuX',
     maxFileSize: 10
-  },{
+  }, {
     name: 'tinhte.vn',
     urlUpload: 'https://api.openload.co/1/file/ul?login=7cf46c19eaac9aee&key=iEwhiOuX',
     maxFileSize: 10
   }
 ]
-var ts  = {
+var ts = {
   length: 10
 }
 Aigle.resolve(api)
-  .mapSeries(host => {
+  .mapSeries(async host => {
     let a = $.get(host.name)
-    console.log(host)
-     return a;
+    return a
   })
 
+
+ 
