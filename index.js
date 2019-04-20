@@ -62,10 +62,11 @@ var ts = {
 }
 Aigle.resolve(api)
   .mapSeries(async host => {
-    let a = $.get(host.name)
-    
-    return Aigle.delay(10).map(() => {
-      console.log(host.name)
-      return a
+    return $.get(host.name).then(async r => {
+      await Aigle.delay(3000)
+      console.log(new Date(), host.name)
+      return r
     })
+    // console.log(host.name)
+    // return a
   })
