@@ -70,13 +70,22 @@ const Aigle = require('aigle');
 //     // console.log(host.name)
 //     // return a
 //   })
-let called = 0;
-Aigle.retry(3, () => {
-  return new Aigle((resolve, reject) => {
-    setTimeout(() => reject(++called), 10);
-  });
+// let called = 0;
+// Aigle.retry(3, () => {
+//   return new Aigle((resolve, reject) => {
+//     setTimeout(() => reject(++called), 10);
+//   });
+// })
+// .catch(error => {
+//   console.log(error); // 3
+//   console.log(called); // 3
+// });
+
+Aigle.resolve([{thinh:1}, {thinh:2}, {thinh:2}])
+.filterSeries(item => {
+  if (item.thinh === 1) {
+    return false;
+  }
+  return item
 })
-.catch(error => {
-  console.log(error); // 3
-  console.log(called); // 3
-});
+.then(console.log)
