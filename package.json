@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "aigle": "^1.13.0",
-    "jquery": "^3.4.0"
+    "jquery": "^3.4.0",
+    "lodash": "^4.17.15"
   }
 }
