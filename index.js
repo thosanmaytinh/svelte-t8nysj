@@ -114,3 +114,28 @@ Aigle
   .zipWith((a, b, c) => {
   console.log(a, b, c);
 });
+
+
+//0000
+const fromTimestamp = 1579520740857 // 2020-01-20T11:45:40.857Z
+const toTimestamp = 1582112812032   // 2020-02-19T11:46:52.032Z
+
+
+let date = new Date('2020-01-20');
+date.setUTCHours(0, 0, 0, 0)
+const fromDate =  Math.round(date.getTime() / 1000)
+
+let _date = new Date('2020-02-19');
+_date.setUTCHours(23, 59, 59)
+const toDate = Math.round(_date.getTime() / 1000)
+
+console.log(fromDate)
+console.log(toDate)
+
+// for(
+//   date = new Date('2020-01-20');
+//   date <= _date;
+//   date.setUTCDate(date.getUTCDate() + 1)
+// ) {
+//   console.log(date)
+// }
